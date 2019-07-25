@@ -1,0 +1,23 @@
+version: '3.2'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - exporter
+  exporter:
+    image: git_exp:latest
+    container_name: git_exp_con
+    ports:
+      - 8081:8081
+    volumes:
+      - ${PWD}/config.yml:/etc/config.yml
+volumes:
+  prometheus.yml:
+  config.yml:

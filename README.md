@@ -33,8 +33,8 @@ EOF
 # If you have docker installed, it is as easy as :
 ~$ docker run -d \
    --name gitlab-ci-pipelines-exporter \
-   -v $(pwd)/config.yml:/etc/config.yml \
-   -p 8080:80 \
+   -v /${PWD}/config.yml:/etc/config.yml \
+   -p 8081:80 \
    mvisonneau/gitlab-ci-pipelines-exporter:latest \
    -config /etc/config.yml
 ```

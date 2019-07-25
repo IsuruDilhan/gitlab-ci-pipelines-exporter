@@ -31,8 +31,8 @@ type project struct {
 }
 
 var (
-	listenAddress = flag.String("listen-address", ":80", "Listening address")
-	configPath    = flag.String("config", "~/.gitlab-ci-pipelines-exporter.yml", "Config file path")
+	listenAddress = flag.String("listen-address", ":8081", "Listening address")
+	configPath    = flag.String("config", "/etc/config.yml", "Config file path")
 )
 
 var (
