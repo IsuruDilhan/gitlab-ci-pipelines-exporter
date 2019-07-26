@@ -15,7 +15,7 @@ services:
     image: git_exp:latest
     container_name: git_exp_con
     ports:
-      - 8081:8081
+      - 8080:8080
     volumes:
       - ${PWD}/config.yml:/etc/config.yml
 volumes:
