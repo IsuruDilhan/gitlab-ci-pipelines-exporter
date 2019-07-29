@@ -7,15 +7,20 @@ and this project adheres to [0ver](https://0ver.org).
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-07-26
+
 ### Added
 
 - Added `securityContext` configuration capability to the chart
 - Added proper `liveness` and `readiness` checks
+- Added support for dynamic discovery of the projects using a wildcard
 
 ### Changed
 
-- Updated default `--listen-port` to **8080**
+- Updated default `--listen-port` to **8080** so that you can run it without `root` user
+- Fixed a bug causing a panic when no pipelines were created on a ref
 - Bumped dependencies
+- Updated Grafana dashboards
 
 ## [0.2.0] - 2019-05-27
 
@@ -48,6 +53,7 @@ and this project adheres to [0ver](https://0ver.org).
 - LICENSE
 - README
 
-[Unreleased]: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter/compare/0.2.1...HEAD
+[0.2.1]: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter/tree/0.2.1
 [0.2.0]: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter/tree/0.2.0
 [0.1.0]: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter/tree/0.1.0
